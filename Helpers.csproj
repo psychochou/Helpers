@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AB16A1D-3313-4839-B673-475283752F61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Helpers</RootNamespace>
+    <AssemblyName>Helpers</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>01.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.5.2.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.5.2-beta3\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Desktop\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>..\..\..\..\..\..\..\psycho\.NETCORE\CodeFormatter\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>..\..\..\..\..\..\..\psycho\.NETCORE\CodeFormatter\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NUglify, Version=1.5.8.0, Culture=neutral, PublicKeyToken=15bc7810aec21b5e, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUglify.1.5.8\lib\net40\NUglify.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.2.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.2.9\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0-beta1\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\net45\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\net45\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.5\lib\net45\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.net45.1.1.5\lib\net45\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.1\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.2.9\lib\net40\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Markdown\Extensions\Abbreviations\Abbreviation.cs" />
+    <Compile Include="Markdown\Extensions\Abbreviations\AbbreviationExtension.cs" />
+    <Compile Include="Markdown\Extensions\Abbreviations\AbbreviationHelper.cs" />
+    <Compile Include="Markdown\Extensions\Abbreviations\AbbreviationInline.cs" />
+    <Compile Include="Markdown\Extensions\Abbreviations\AbbreviationParser.cs" />
+    <Compile Include="Markdown\Extensions\Abbreviations\HtmlAbbreviationRenderer.cs" />
+    <Compile Include="Markdown\Extensions\AutoIdentifiers\AutoIdentifierExtension.cs" />
+    <Compile Include="Markdown\Extensions\AutoIdentifiers\AutoIdentifierOptions.cs" />
+    <Compile Include="Markdown\Extensions\AutoIdentifiers\HeadingLinkReferenceDefinition.cs" />
+    <Compile Include="Markdown\Extensions\AutoLinks\AutoLinkExtension.cs" />
+    <Compile Include="Markdown\Extensions\AutoLinks\AutoLinkParser.cs" />
+    <Compile Include="Markdown\Extensions\Bootstrap\BootstrapExtension.cs" />
+    <Compile Include="Markdown\Extensions\Citations\CitationExtension.cs" />
+    <Compile Include="Markdown\Extensions\CustomContainers\CustomContainer.cs" />
+    <Compile Include="Markdown\Extensions\CustomContainers\CustomContainerExtension.cs" />
+    <Compile Include="Markdown\Extensions\CustomContainers\CustomContainerInline.cs" />
+    <Compile Include="Markdown\Extensions\CustomContainers\CustomContainerParser.cs" />
+    <Compile Include="Markdown\Extensions\CustomContainers\HtmlCustomContainerInlineRenderer.cs" />
+    <Compile Include="Markdown\Extensions\CustomContainers\HtmlCustomContainerRenderer.cs" />
+    <Compile Include="Markdown\Extensions\DefinitionLists\DefinitionItem.cs" />
+    <Compile Include="Markdown\Extensions\DefinitionLists\DefinitionList.cs" />
+    <Compile Include="Markdown\Extensions\DefinitionLists\DefinitionListExtension.cs" />
+    <Compile Include="Markdown\Extensions\DefinitionLists\DefinitionListParser.cs" />
+    <Compile Include="Markdown\Extensions\DefinitionLists\DefinitionTerm.cs" />
+    <Compile Include="Markdown\Extensions\DefinitionLists\HtmlDefinitionListRenderer.cs" />
+    <Compile Include="Markdown\Extensions\Diagrams\DiagramExtension.cs" />
+    <Compile Include="Markdown\Extensions\Emoji\EmojiExtension.cs" />
+    <Compile Include="Markdown\Extensions\Emoji\EmojiInline.cs" />
+    <Compile Include="Markdown\Extensions\Emoji\EmojiParser.cs" />
+    <Compile Include="Markdown\Extensions\EmphasisExtras\EmphasisExtraExtension.cs" />
+    <Compile Include="Markdown\Extensions\EmphasisExtras\EmphasisExtraOptions.cs" />
+    <Compile Include="Markdown\Extensions\Figures\Figure.cs" />
+    <Compile Include="Markdown\Extensions\Figures\FigureBlockParser.cs" />
+    <Compile Include="Markdown\Extensions\Figures\FigureCaption.cs" />
+    <Compile Include="Markdown\Extensions\Figures\FigureExtension.cs" />
+    <Compile Include="Markdown\Extensions\Figures\HtmlFigureCaptionRenderer.cs" />
+    <Compile Include="Markdown\Extensions\Figures\HtmlFigureRenderer.cs" />
+    <Compile Include="Markdown\Extensions\Footers\FooterBlock.cs" />
+    <Compile Include="Markdown\Extensions\Footers\FooterBlockParser.cs" />
+    <Compile Include="Markdown\Extensions\Footers\FooterExtension.cs" />
+    <Compile Include="Markdown\Extensions\Footers\HtmlFooterRenderer.cs" />
+    <Compile Include="Markdown\Extensions\Footnotes\Footnote.cs" />
+    <Compile Include="Markdown\Extensions\Footnotes\FootnoteExtension.cs" />
+    <Compile Include="Markdown\Extensions\Footnotes\FootnoteGroup.cs" />
+    <Compile Include="Markdown\Extensions\Footnotes\FootnoteLink.cs" />
+    <Compile Include="Markdown\Extensions\Footnotes\FootnoteLinkReferenceDefinition.cs" />
+    <Compile Include="Markdown\Extensions\Footnotes\FootnoteParser.cs" />
+    <Compile Include="Markdown\Extensions\Footnotes\HtmlFootnoteGroupRenderer.cs" />
+    <Compile Include="Markdown\Extensions\Footnotes\HtmlFootnoteLinkRenderer.cs" />
+    <Compile Include="Markdown\Extensions\GenericAttributes\GenericAttributesExtension.cs" />
+    <Compile Include="Markdown\Extensions\GenericAttributes\GenericAttributesParser.cs" />
+    <Compile Include="Markdown\Extensions\Hardlines\SoftlineBreakAsHardlineExtension.cs" />
+    <Compile Include="Markdown\Extensions\JiraLinks\JiraLink.cs" />
+    <Compile Include="Markdown\Extensions\JiraLinks\JiraLinkExtension.cs" />
+    <Compile Include="Markdown\Extensions\JiraLinks\JiraLinkInlineParser.cs" />
+    <Compile Include="Markdown\Extensions\JiraLinks\JiraLinkOptions.cs" />
+    <Compile Include="Markdown\Extensions\ListExtras\ListExtraExtension.cs" />
+    <Compile Include="Markdown\Extensions\ListExtras\ListExtraItemParser.cs" />
+    <Compile Include="Markdown\Extensions\Mathematics\HtmlMathBlockRenderer.cs" />
+    <Compile Include="Markdown\Extensions\Mathematics\HtmlMathInlineRenderer.cs" />
+    <Compile Include="Markdown\Extensions\Mathematics\MathBlock.cs" />
+    <Compile Include="Markdown\Extensions\Mathematics\MathBlockParser.cs" />
+    <Compile Include="Markdown\Extensions\Mathematics\MathExtension.cs" />
+    <Compile Include="Markdown\Extensions\Mathematics\MathInline.cs" />
+    <Compile Include="Markdown\Extensions\Mathematics\MathInlineParser.cs" />
+    <Compile Include="Markdown\Extensions\MediaLinks\MediaLinkExtension.cs" />
+    <Compile Include="Markdown\Extensions\MediaLinks\MediaOptions.cs" />
+    <Compile Include="Markdown\Extensions\NonAsciiNoEscape\NonAsciiNoEscapeExtension.cs" />
+    <Compile Include="Markdown\Extensions\NoRefLinks\NoFollowLinksExtension.cs" />
+    <Compile Include="Markdown\Extensions\PragmaLines\PragmaLineExtension.cs" />
+    <Compile Include="Markdown\Extensions\SelfPipeline\SelfPipelineExtension.cs" />
+    <Compile Include="Markdown\Extensions\SmartyPants\HtmlSmartyPantRenderer.cs" />
+    <Compile Include="Markdown\Extensions\SmartyPants\SmartyPant.cs" />
+    <Compile Include="Markdown\Extensions\SmartyPants\SmartyPantOptions.cs" />
+    <Compile Include="Markdown\Extensions\SmartyPants\SmartyPantsExtension.cs" />
+    <Compile Include="Markdown\Extensions\SmartyPants\SmartyPantsInlineParser.cs" />
+    <Compile Include="Markdown\Extensions\SmartyPants\SmartyPantType.cs" />
+    <Compile Include="Markdown\Extensions\Tables\GridTableExtension.cs" />
+    <Compile Include="Markdown\Extensions\Tables\GridTableParser.cs" />
+    <Compile Include="Markdown\Extensions\Tables\GridTableState.cs" />
+    <Compile Include="Markdown\Extensions\Tables\HtmlTableRenderer.cs" />
+    <Compile Include="Markdown\Extensions\Tables\PipeTableBlockParser.cs" />
+    <Compile Include="Markdown\Extensions\Tables\PipeTableDelimiterInline.cs" />
+    <Compile Include="Markdown\Extensions\Tables\PipeTableExtension.cs" />
+    <Compile Include="Markdown\Extensions\Tables\PipeTableOptions.cs" />
+    <Compile Include="Markdown\Extensions\Tables\PipeTableParser.cs" />
+    <Compile Include="Markdown\Extensions\Tables\Table.cs" />
+    <Compile Include="Markdown\Extensions\Tables\TableCell.cs" />
+    <Compile Include="Markdown\Extensions\Tables\TableColumnAlign.cs" />
+    <Compile Include="Markdown\Extensions\Tables\TableColumnDefinition.cs" />
+    <Compile Include="Markdown\Extensions\Tables\TableHelper.cs" />
+    <Compile Include="Markdown\Extensions\Tables\TableRow.cs" />
+    <Compile Include="Markdown\Extensions\TaskLists\HtmlTaskListRenderer.cs" />
+    <Compile Include="Markdown\Extensions\TaskLists\TaskList.cs" />
+    <Compile Include="Markdown\Extensions\TaskLists\TaskListExtension.cs" />
+    <Compile Include="Markdown\Extensions\TaskLists\TaskListInlineParser.cs" />
+    <Compile Include="Markdown\Extensions\Yaml\YamlFrontMatterBlock.cs" />
+    <Compile Include="Markdown\Extensions\Yaml\YamlFrontMatterExtension.cs" />
+    <Compile Include="Markdown\Extensions\Yaml\YamlFrontMatterParser.cs" />
+    <Compile Include="Markdown\Extensions\Yaml\YamlFrontMatterRenderer.cs" />
+    <Compile Include="Markdown\Helpers\ArrayHelper.cs" />
+    <Compile Include="Markdown\Helpers\CharacterMap.cs" />
+    <Compile Include="Markdown\Helpers\CharHelper.cs" />
+    <Compile Include="Markdown\Helpers\CharNormalizer.cs" />
+    <Compile Include="Markdown\Helpers\DefaultObjectCache.cs" />
+    <Compile Include="Markdown\Helpers\EntityHelper.cs" />
+    <Compile Include="Markdown\Helpers\HtmlHelper.cs" />
+    <Compile Include="Markdown\Helpers\ICharIterator.cs" />
+    <Compile Include="Markdown\Helpers\LineReader.cs" />
+    <Compile Include="Markdown\Helpers\LinkHelper.cs" />
+    <Compile Include="Markdown\Helpers\MethodImplOptionPortable.cs" />
+    <Compile Include="Markdown\Helpers\ObjectCache.cs" />
+    <Compile Include="Markdown\Helpers\OrderedList.cs" />
+    <Compile Include="Markdown\Helpers\StringBuilderCache.cs" />
+    <Compile Include="Markdown\Helpers\StringBuilderExtensions.cs" />
+    <Compile Include="Markdown\Helpers\StringLine.cs" />
+    <Compile Include="Markdown\Helpers\StringLineGroup.cs" />
+    <Compile Include="Markdown\Helpers\StringSlice.cs" />
+    <Compile Include="Markdown\Helpers\TextMatcher.cs" />
+    <Compile Include="Markdown\IMarkdownExtension.cs" />
+    <Compile Include="Markdown\Markdown.cs" />
+    <Compile Include="Markdown\MarkdownExtensions.cs" />
+    <Compile Include="Markdown\MarkdownPipeline.cs" />
+    <Compile Include="Markdown\MarkdownPipelineBuilder.cs" />
+    <Compile Include="Markdown\Parsers\BlockParser.cs" />
+    <Compile Include="Markdown\Parsers\BlockParserList.cs" />
+    <Compile Include="Markdown\Parsers\BlockProcessor.cs" />
+    <Compile Include="Markdown\Parsers\BlockState.cs" />
+    <Compile Include="Markdown\Parsers\BlockStateExtensions.cs" />
+    <Compile Include="Markdown\Parsers\FencedBlockParserBase.cs" />
+    <Compile Include="Markdown\Parsers\FencedCodeBlockParser.cs" />
+    <Compile Include="Markdown\Parsers\HeadingBlockParser.cs" />
+    <Compile Include="Markdown\Parsers\HtmlBlockParser.cs" />
+    <Compile Include="Markdown\Parsers\IAttributesParseable.cs" />
+    <Compile Include="Markdown\Parsers\IBlockParser.cs" />
+    <Compile Include="Markdown\Parsers\IInlineParser.cs" />
+    <Compile Include="Markdown\Parsers\IMarkdownParser.cs" />
+    <Compile Include="Markdown\Parsers\IndentedCodeBlockParser.cs" />
+    <Compile Include="Markdown\Parsers\InlineParser.cs" />
+    <Compile Include="Markdown\Parsers\InlineParserList.cs" />
+    <Compile Include="Markdown\Parsers\InlineProcessor.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\AutolineInlineParser.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\CodeInlineParser.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\EmphasisDescriptor.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\EmphasisInlineParser.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\EscapeInlineParser.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\HtmlEntityParser.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\LineBreakInlineParser.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\LinkInlineParser.cs" />
+    <Compile Include="Markdown\Parsers\Inlines\LiteralInlineParser.cs" />
+    <Compile Include="Markdown\Parsers\IPostInlineProcessor.cs" />
+    <Compile Include="Markdown\Parsers\ListBlockParser.cs" />
+    <Compile Include="Markdown\Parsers\ListInfo.cs" />
+    <Compile Include="Markdown\Parsers\ListItemParser.cs" />
+    <Compile Include="Markdown\Parsers\MarkdownParser.cs" />
+    <Compile Include="Markdown\Parsers\NumberedListItemParser.cs" />
+    <Compile Include="Markdown\Parsers\OrderedListItemParser.cs" />
+    <Compile Include="Markdown\Parsers\ParagraphBlockParser.cs" />
+    <Compile Include="Markdown\Parsers\ParserBase.cs" />
+    <Compile Include="Markdown\Parsers\ParserList.cs" />
+    <Compile Include="Markdown\Parsers\QuoteBlockParser.cs" />
+    <Compile Include="Markdown\Parsers\ThematicBreakParser.cs" />
+    <Compile Include="Markdown\Parsers\UnorderedListItemParser.cs" />
+    <Compile Include="Markdown\Renderers\HtmlRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\CodeBlockRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\HeadingRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\HtmlAttributes.cs" />
+    <Compile Include="Markdown\Renderers\Html\HtmlBlockRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\HtmlObjectRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\AutolinkInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\CodeInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\DelimiterInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\EmphasisInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\HtmlEntityInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\HtmlInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\LineBreakInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\LinkInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\Inlines\LiteralInlineRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\ListRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\ParagraphRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\QuoteBlockRenderer.cs" />
+    <Compile Include="Markdown\Renderers\Html\ThematicBreakRenderer.cs" />
+    <Compile Include="Markdown\Renderers\IMarkdownObjectRenderer.cs" />
+    <Compile Include="Markdown\Renderers\IMarkdownRenderer.cs" />
+    <Compile Include="Markdown\Renderers\MarkdownObjectRenderer.cs" />
+    <Compile Include="Markdown\Renderers\ObjectRendererCollection.cs" />
+    <Compile Include="Markdown\Renderers\RendererBase.cs" />
+    <Compile Include="Markdown\Renderers\TextRendererBase.cs" />
+    <Compile Include="Markdown\Syntax\BlankLineBlock.cs" />
+    <Compile Include="Markdown\Syntax\Block.cs" />
+    <Compile Include="Markdown\Syntax\BlockExtensions.cs" />
+    <Compile Include="Markdown\Syntax\CharIteratorHelper.cs" />
+    <Compile Include="Markdown\Syntax\CodeBlock.cs" />
+    <Compile Include="Markdown\Syntax\ContainerBlock.cs" />
+    <Compile Include="Markdown\Syntax\FencedCodeBlock.cs" />
+    <Compile Include="Markdown\Syntax\HeadingBlock.cs" />
+    <Compile Include="Markdown\Syntax\HtmlBlock.cs" />
+    <Compile Include="Markdown\Syntax\HtmlBlockType.cs" />
+    <Compile Include="Markdown\Syntax\IBlock.cs" />
+    <Compile Include="Markdown\Syntax\IFencedBlock.cs" />
+    <Compile Include="Markdown\Syntax\IMarkdownObject.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\AutolinkInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\CodeInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\ContainerInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\DelimiterInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\DelimiterType.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\EmphasisDelimiterInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\EmphasisInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\HtmlEntityInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\HtmlInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\IInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\Inline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\LeafInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\LineBreakInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\LinkDelimiterInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\LinkInline.cs" />
+    <Compile Include="Markdown\Syntax\Inlines\LiteralInline.cs" />
+    <Compile Include="Markdown\Syntax\LeafBlock.cs" />
+    <Compile Include="Markdown\Syntax\LinkReferenceDefinition.cs" />
+    <Compile Include="Markdown\Syntax\LinkReferenceDefinitionExtensions.cs" />
+    <Compile Include="Markdown\Syntax\LinkReferenceDefinitionGroup.cs" />
+    <Compile Include="Markdown\Syntax\ListBlock.cs" />
+    <Compile Include="Markdown\Syntax\ListItemBlock.cs" />
+    <Compile Include="Markdown\Syntax\MarkdownDocument.cs" />
+    <Compile Include="Markdown\Syntax\MarkdownObject.cs" />
+    <Compile Include="Markdown\Syntax\MarkdownObjectExtensions.cs" />
+    <Compile Include="Markdown\Syntax\ParagraphBlock.cs" />
+    <Compile Include="Markdown\Syntax\QuoteBlock.cs" />
+    <Compile Include="Markdown\Syntax\SourceSpan.cs" />
+    <Compile Include="Markdown\Syntax\ThematicBreakBlock.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\Shared.CodeGenerator.cs" />
+    <Compile Include="Shared\Shared.cs" />
+    <Compile Include="Shared\Shared.Encodings.Web.cs" />
+    <Compile Include="Shared\Shared.Mobi.cs" />
+    <Compile Include="Shared\Shared.Pdf.cs" />
+    <Compile Include="Shared\Shared.Epub.cs" />
+    <Compile Include="Shared\Shared.Form.cs" />
+    <Compile Include="Shared\Shared.Safari.cs" />
+    <Compile Include="Shared\Shared.Simulate.cs" />
+    <Compile Include="Shared\Shared.Translator.Import.cs" />
+    <Compile Include="Shared\Shared.WebServer.cs" />
+    <Compile Include="Shared\Shared.Translator.cs" />
+    <Compile Include="Shared\Shared.Win32.cs" />
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Markdown\Diagrams\Parsers.cd" />
+    <None Include="Markdown\Diagrams\Renderers.cd" />
+    <None Include="Markdown\Diagrams\Syntax.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Shared\Shared.Markdown.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="01.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets'))" />
+  </Target>
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.osx.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.osx.targets')" />
+  <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.v110_xp.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.v110_xp.targets')" />
+</Project>
